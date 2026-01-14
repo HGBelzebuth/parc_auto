@@ -1,0 +1,458 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: #f5f5f5;
+  padding: 0 1rem; /* Ajout de padding pour mobile */
+}
+
+/*
+main {
+  width: 100%;
+  max-width: 80%;
+  height: auto;
+  padding: 10px;
+  background-color: rgb(207, 207, 207);
+}
+*/
+
+section {
+  margin: 20px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* TABLES */
+table {
+  border-collapse: collapse;
+  flex: 1;
+  margin: 10px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+th {
+  background-color: rgb(197, 197, 197);
+  color: rgb(95, 95, 95);
+  font-weight: bold;
+  font-size: 8px;
+  padding: 8px;
+}
+
+td {
+  text-align: center;
+  font-size: 6px;
+  color: gray;
+  padding: 6px;
+}
+
+/* SECTION TOP */
+.top {
+  padding: 5px;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permet le passage à la ligne sur mobile */
+}
+
+.card {
+  flex: 1;
+  min-width: 200px; /* Largeur minimum pour éviter trop de compression */
+  display: flex;
+  text-align: center;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center; /* Centrage vertical */
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card > div:first-child {
+  flex: 1;
+  text-align: left;
+}
+
+.card .label {
+  font-weight: bold;
+  font-size: 10px;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+.card .value {
+  font-weight: bold;
+  font-size: x-large;
+  color: #333;
+}
+
+.background_icone {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Empêche la réduction de taille */
+  margin-left: auto; /* Pousse l'icône à droite */
+}
+
+.user {
+  background-color: rgba(12, 181, 96, 0.318);
+}
+
+.pv {
+  background-color: rgba(255, 0, 115, 0.286);
+}
+
+.repair {
+  background-color: rgba(117, 171, 23, 0.349);
+}
+
+.car {
+  background-color: rgba(0, 0, 255, 0.286);
+}
+
+.icone {
+  height: 20px;
+  width: auto;
+}
+
+/* SECTION MID */
+.midle {
+  padding: 5px;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Passage à la ligne sur mobile */
+}
+
+.card_midle {
+  flex: 1;
+  min-width: 300px; /* Largeur minimum */
+  background-color: white;
+  border-top: 3px solid red;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left {
+  border-top: 3px solid red;
+}
+
+.rigth {
+  border-top: 3px solid orange;
+}
+
+.grid {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  overflow-x: auto; /* Scroll horizontal si nécessaire sur mobile */
+}
+
+.grid table td {
+  font-weight: bold;
+  font-size: 0.7rem;
+  border-top: 1px solid gray;
+}
+
+/* SECTION BOT */
+.bot {
+  background-color: white;
+  border-top: 3px solid rgb(210, 224, 11);
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cards_bot {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap; /* Passage à la ligne sur mobile */
+}
+
+.card_bot {
+  flex: 1;
+  min-width: 200px; /* Largeur minimum */
+  background-color: beige;
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card_bot:hover {
+  transform: translateY(-2px);
+}
+
+.card_bot div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fixed_price {
+  font-weight: bold;
+  color: #333;
+}
+
+.immat {
+  padding: 4px 8px;
+  background-color: white;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.info {
+  font-size: 12px;
+  color: gray;
+}
+
+.end_card {
+  border-top: 1px solid gray;
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+/* SPECIFIC STYLES */
+.plaque {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.status {
+  border-radius: 3px;
+  background-color: rgb(255, 174, 198);
+  color: rgb(131, 2, 2);
+  font-weight: bold;
+  font-size: 0.5rem;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+.total_penalty {
+  color: red;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.maintenance_price {
+  color: orange;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.line {
+  border-top: 1px solid gray;
+}
+
+/* RESPONSIVE */
+
+/* Tablettes (768px et moins) */
+@media (max-width: 768px) {
+  body {
+    padding: 0 0.5rem;
+  }
+
+  /*
+  main {
+    max-width: 95%;
+    padding: 8px;
+  }
+*/
+
+  section {
+    margin: 15px 10px;
+  }
+
+  .top {
+    gap: 15px;
+  }
+
+  .card {
+    min-width: calc(50% - 10px);
+    flex: 1 1 calc(50% - 10px);
+    padding: 12px;
+  }
+
+  .card .value {
+    font-size: 1.5rem;
+  }
+
+  .background_icone {
+    width: 35px;
+    height: 35px;
+  }
+
+  .midle {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card_midle {
+    min-width: 100%;
+  }
+
+  th {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  td {
+    font-size: 8px;
+    padding: 4px;
+  }
+
+  .grid table td {
+    font-size: 0.65rem;
+  }
+
+  h2 {
+    font-size: 0.95rem;
+  }
+
+  .cards_bot {
+    gap: 10px;
+  }
+
+  .card_bot {
+    min-width: calc(50% - 5px);
+    flex: 1 1 calc(50% - 5px);
+    padding: 12px;
+  }
+}
+
+/*  Smartphones < 480px */
+@media (max-width: 480px) {
+  body {
+    padding: 0;
+  }
+
+  /*
+  main {
+    max-width: 100%;
+    padding: 5px;
+    border-radius: 0;
+  }
+*/
+
+  section {
+    margin: 10px 5px;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    min-width: 100%;
+    flex: 1 1 100%;
+    padding: 12px;
+  }
+
+  .card .label {
+    font-size: 9px;
+  }
+
+  .card .value {
+    font-size: 1.3rem;
+  }
+
+  .background_icone {
+    width: 32px;
+    height: 32px;
+  }
+
+  .midle {
+    gap: 10px;
+  }
+
+  .card_midle {
+    padding: 10px;
+  }
+
+  /* Tables - Mode scroll horizontal */
+  .grid {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  th {
+    font-size: 9px;
+    padding: 4px;
+  }
+
+  td {
+    font-size: 7px;
+    padding: 3px;
+  }
+
+  .grid table td {
+    font-size: 0.6rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .cards_bot {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card_bot {
+    min-width: 100%;
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+
+  .immat {
+    font-size: 0.75rem;
+  }
+
+  .info {
+    font-size: 10px;
+  }
+
+  .fixed_price {
+    font-size: 0.9rem;
+  }
+
+  .status {
+    font-size: 0.45rem;
+    padding: 3px 6px;
+  }
+}
